@@ -3,6 +3,7 @@ package com.alex.gordon.timesheet.util;
 import org.springframework.data.redis.core.RedisHash;
 import org.springframework.data.redis.core.index.Indexed;
 
+import javax.validation.constraints.NotBlank;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -13,27 +14,48 @@ public class TimesheetEntity {
     private String id = UUID.randomUUID().toString();
     private String date;
     @Indexed
+    @NotBlank
     private String client;
+    @NotBlank
     private String project;
+    @NotBlank
     private String projectCode;
+    @NotBlank
     private String task;
+    @NotBlank
     private String hours;
+    @NotBlank
     private String hoursRounded;
+    @NotBlank
     private String billable;
+    @NotBlank
     private String invoiced;
+    @NotBlank
     private String approved;
+    @NotBlank
     private String firstName;
+    @NotBlank
     private String lastName;
+    @NotBlank
     private String department;
+    @NotBlank
     private String employee;
+    @NotBlank
     private String billableRate;
+    @NotBlank
     private String costRate;
+    @NotBlank
     private String costAmount;
+    @NotBlank
     private String currency;
-    private String external0ReferenceUrl;
+    private String externalReferenceUrl;
 
     public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override
@@ -71,7 +93,7 @@ public class TimesheetEntity {
                 ", costRate='" + costRate + '\'' +
                 ", costAmount='" + costAmount + '\'' +
                 ", currency='" + currency + '\'' +
-                ", external0ReferenceUrl='" + external0ReferenceUrl + '\'' +
+                ", externalReferenceUrl='" + externalReferenceUrl + '\'' +
                 '}';
     }
 
@@ -219,11 +241,11 @@ public class TimesheetEntity {
         this.currency = currency;
     }
 
-    public String getExternal0ReferenceUrl() {
-        return external0ReferenceUrl;
+    public String getExternalReferenceUrl() {
+        return externalReferenceUrl;
     }
 
-    public void setExternal0ReferenceUrl(String external0ReferenceUrl) {
-        this.external0ReferenceUrl = external0ReferenceUrl;
+    public void setExternalReferenceUrl(String external0ReferenceUrl) {
+        this.externalReferenceUrl = external0ReferenceUrl;
     }
 }
