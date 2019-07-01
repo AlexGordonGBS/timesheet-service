@@ -3,14 +3,16 @@
 ## Functionality
 
 <p> This is REST API for the timesheet maintenance of some fictious company. The following standard endpoints are implemented: </p>
-* ADD a new timesheet
-* EDIT an existing timesheet
-* DELETE an existing timesheet
-* display an existing timesheet by ID
-* display all timesheets
-* display all timesheet for the given client
+   
+   * ADD a new timesheet
+   * EDIT an existing timesheet
+   * DELETE an existing timesheet
+   * display an existing timesheet by ID
+   * display all timesheets
+   * display all timesheet for the given client
 
-<p> Additionally one utility endpoint is implemented to load data from the given CSV file to the database. </p>
+<p> Additionally one utility endpoint is implemented: </p>
+   * LOAD data from the given CSV file to the database
 
 ## Business Rules
 
@@ -70,15 +72,15 @@ a requested timesheet. </p>
 ```
     mkdir tempDir
 ```
-* go to your new directory you just created:
+* navigate to your new directory you just created:
 ```
     cd tempDir
 ```
-* clone the project inot your new directory:
+* clone the project into your new directory:
 ```
     git clone https://github.com/AlexGordonGBS/timesheet-service.git
 ```
-* go to the timesheet-service directory inside your tempDir:
+* navigate to the timesheet-service directory inside your tempDir:
 ```
     cd timesheet-service
 ```
@@ -94,3 +96,5 @@ a requested timesheet. </p>
 ```
     ...timesheet-service/src/test/resources/Timesheet-service.postman_collection.json
 ```
+
+//By Alex Gordon - 2019.
