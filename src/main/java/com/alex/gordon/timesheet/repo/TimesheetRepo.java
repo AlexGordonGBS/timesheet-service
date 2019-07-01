@@ -6,6 +6,11 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * <p> Repository interface.</p>
+ *
+ * @author Alex Gordon
+ */
 @Repository
 public interface TimesheetRepo extends CrudRepository<TimesheetEntity, String> {
 

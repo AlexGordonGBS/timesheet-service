@@ -10,6 +10,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * <p> Service class.</p>
+ *
+ * @author Alex Gordon
+ */
 @Service
 public class TimesheetService {
 

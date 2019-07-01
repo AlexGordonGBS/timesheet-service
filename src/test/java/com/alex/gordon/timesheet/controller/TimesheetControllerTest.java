@@ -29,6 +29,11 @@ import java.io.InputStreamReader;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
+/**
+ * <p> Controller test class.</p>
+ *
+ * @author Alex Gordon
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TimesheetCrudApplication.class)
 @WebAppConfiguration
@@ -46,6 +51,11 @@ public class TimesheetControllerTest {
                 .build();
     }
 
+    /**
+     * Test create function - positive scenario
+     *
+     * @throws Exception
+     */
     @Test
     public void addTimesheet_positive() throws Exception {
         //Given
@@ -67,6 +77,11 @@ public class TimesheetControllerTest {
         assertEquals(entityExpected, entityActual);
     }
 
+    /**
+     * Test create function - negative scenario - one required field is blank!
+     *
+     * @throws Exception
+     */
     @Test
     public void addTimesheet_negative() throws Exception {
         //Given
