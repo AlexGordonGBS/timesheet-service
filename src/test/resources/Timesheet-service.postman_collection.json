@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "8617bb5d-813a-490e-86c3-60687ae9d986",
+		"name": "Timesheet-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Display ALL Timesheets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Display Timesheets by Client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/timesheets/client/Anil",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"timesheets",
+						"client",
+						"Anil"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Display Timesheet by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Create a new Timesheet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"date\": \"4/3/17\",\n  \"client\": \"Twitri\",\n  \"project\": \"CLOB Rearchitecture\",\n  \"projectCode\": \"BGC001\",\n  \"task\": \"Project Management\",\n  \"hours\": \"6.26\",\n  \"hoursRounded\": \"6\",\n  \"billable\": \"Yes\",\n  \"invoiced\": \"Yes\",\n  \"approved\": \"Yes\",\n  \"firstName\": \"Walter\",\n  \"lastName\": \"Silva\",\n  \"department\": \"Product\",\n  \"employee\": \"Yes\",\n  \"billableRate\": \"50\",\n  \"costRate\": \"0\",\n  \"costAmount\": \"0\",\n  \"currency\": \"United States Dollar - USD\",\n  \"external0ReferenceUrl\": \"\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/timesheets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"timesheets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update an existing Timesheet",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"date\": \"4/24/18\",\n        \"client\": \"Anil\",\n        \"project\": \"Watchlist Demo GOrdon\",\n        \"projectCode\": \"RD003\",\n        \"task\": \"Project Management\",\n        \"hours\": \" 1.78 \",\n        \"hoursRounded\": \"2\",\n        \"billable\": \"No\",\n        \"invoiced\": \"No\",\n        \"approved\": \"Yes\",\n        \"firstName\": \"Walter\",\n        \"lastName\": \"Silva\",\n        \"department\": \"Product\",\n        \"employee\": \"Yes\",\n        \"billableRate\": \"0\",\n        \"costRate\": \"0\",\n        \"costAmount\": \"0\",\n        \"currency\": \"United States Dollar - USD\",\n        \"external0ReferenceUrl\": \"\"\n    }\n    "
+				},
+				"url": {
+					"raw": "http://localhost:8080/timesheets/d5450f97-3f2a-47e4-a72a-2e14073c5ede",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"timesheets",
+						"d5450f97-3f2a-47e4-a72a-2e14073c5ede"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST load data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"date\": \"4/3/17\",\n  \"client\": \"Twitri\",\n  \"project\": \"CLOB Rearchitecture\",\n  \"projectCode\": \"BGC001\",\n  \"task\": \"Project Management\",\n  \"hours\": \"6.26\",\n  \"hoursRounded\": \"6\",\n  \"billable\": \"Yes\",\n  \"invoiced\": \"Yes\",\n  \"approved\": \"Yes\",\n  \"firstName\": \"Walter\",\n  \"lastName\": \"Silva\",\n  \"department\": \"Product\",\n  \"employee\": \"Yes\",\n  \"billableRate\": \"50\",\n  \"costRate\": \"0\",\n  \"costAmount\": \"0\",\n  \"currency\": \"United States Dollar - USD\",\n  \"external0ReferenceUrl\": \"\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/timesheets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"timesheets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Timesheet by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/timesheets/29128880-6288-4efe-b052-524ebd39818e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"timesheets",
+						"29128880-6288-4efe-b052-524ebd39818e1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
