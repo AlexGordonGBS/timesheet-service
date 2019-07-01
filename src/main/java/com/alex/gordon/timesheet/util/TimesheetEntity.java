@@ -5,13 +5,12 @@ import org.springframework.data.redis.core.index.Indexed;
 
 import javax.validation.constraints.NotBlank;
 import java.util.Objects;
-import java.util.UUID;
 
 @RedisHash("Timesheet")
 public class TimesheetEntity {
 
     @Indexed
-    private String id = UUID.randomUUID().toString();
+    private String id;
     @NotBlank
     private String date;
     @Indexed

@@ -6,25 +6,33 @@
 	},
 	"item": [
 		{
-			"name": "GET Display ALL Timesheets",
+			"name": "GET DISPLAY ALL Timesheets",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/timesheets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"timesheets"
+					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "GET Display Timesheets by Client",
+			"name": "GET DISPLAY Timesheets by Client",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8080/timesheets/client/Anil",
+					"raw": "http://localhost:8080/timesheets/client/Audosis",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -33,26 +41,35 @@
 					"path": [
 						"timesheets",
 						"client",
-						"Anil"
+						"Audosis"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "GET Display Timesheet by ID",
+			"name": "GET DISPLAY Timesheet by ID",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/timesheets/20431d38-3852-4693-b4a4-80c9a44c4db4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"timesheets",
+						"20431d38-3852-4693-b4a4-80c9a44c4db4"
+					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "POST Create a new Timesheet",
+			"name": "POST CREATE a new Timesheet",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -63,7 +80,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"date\": \"4/3/17\",\n  \"client\": \"Twitri\",\n  \"project\": \"CLOB Rearchitecture\",\n  \"projectCode\": \"BGC001\",\n  \"task\": \"Project Management\",\n  \"hours\": \"6.26\",\n  \"hoursRounded\": \"6\",\n  \"billable\": \"Yes\",\n  \"invoiced\": \"Yes\",\n  \"approved\": \"Yes\",\n  \"firstName\": \"Walter\",\n  \"lastName\": \"Silva\",\n  \"department\": \"Product\",\n  \"employee\": \"Yes\",\n  \"billableRate\": \"50\",\n  \"costRate\": \"0\",\n  \"costAmount\": \"0\",\n  \"currency\": \"United States Dollar - USD\",\n  \"external0ReferenceUrl\": \"\"\n}\n"
+					"raw": "{\n  \"date\": \"4/3/17\",\n  \"client\": \"Alex\",\n  \"project\": \"CLOB Rearchitecture\",\n  \"projectCode\": \"BGC001\",\n  \"task\": \"Project Management\",\n  \"hours\": \"6.26\",\n  \"hoursRounded\": \"6\",\n  \"billable\": \"Yes\",\n  \"invoiced\": \"Yes\",\n  \"approved\": \"Yes\",\n  \"firstName\": \"Walter\",\n  \"lastName\": \"Silva\",\n  \"department\": \"Product\",\n  \"employee\": \"Yes\",\n  \"billableRate\": \"50\",\n  \"costRate\": \"0\",\n  \"costAmount\": \"0\",\n  \"currency\": \"United States Dollar - USD\",\n  \"external0ReferenceUrl\": \"\"\n}\n"
 				},
 				"url": {
 					"raw": "http://localhost:8080/timesheets",
@@ -80,7 +97,7 @@
 			"response": []
 		},
 		{
-			"name": "PUT Update an existing Timesheet",
+			"name": "PUT UPDATE an existing Timesheet",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -91,10 +108,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n        \"date\": \"4/24/18\",\n        \"client\": \"Anil\",\n        \"project\": \"Watchlist Demo GOrdon\",\n        \"projectCode\": \"RD003\",\n        \"task\": \"Project Management\",\n        \"hours\": \" 1.78 \",\n        \"hoursRounded\": \"2\",\n        \"billable\": \"No\",\n        \"invoiced\": \"No\",\n        \"approved\": \"Yes\",\n        \"firstName\": \"Walter\",\n        \"lastName\": \"Silva\",\n        \"department\": \"Product\",\n        \"employee\": \"Yes\",\n        \"billableRate\": \"0\",\n        \"costRate\": \"0\",\n        \"costAmount\": \"0\",\n        \"currency\": \"United States Dollar - USD\",\n        \"external0ReferenceUrl\": \"\"\n    }\n    "
+					"raw": "{\n    \"date\": \"bad date\",\n    \"client\": \"Alex Gordon Inc.\",\n    \"project\": \"CLOB Rearchitecture\",\n    \"projectCode\": \"BGC001\",\n    \"task\": \"Project Management\",\n    \"hours\": \"6.26\",\n    \"hoursRounded\": \"6\",\n    \"billable\": \"Yes\",\n    \"invoiced\": \"Yes\",\n    \"approved\": \"Yes\",\n    \"firstName\": \"Walter\",\n    \"lastName\": \"Silva\",\n    \"department\": \"Product\",\n    \"employee\": \"Yes\",\n    \"billableRate\": \"50\",\n    \"costRate\": \"12\",\n    \"costAmount\": \"0\",\n    \"currency\": \"United States Dollar - USD\",\n    \"external0ReferenceUrl\": \"\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/timesheets/d5450f97-3f2a-47e4-a72a-2e14073c5ede",
+					"raw": "http://localhost:8080/timesheets/e7fd701a-1889-4067-891f-48e58b457f71",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -102,14 +119,14 @@
 					"port": "8080",
 					"path": [
 						"timesheets",
-						"d5450f97-3f2a-47e4-a72a-2e14073c5ede"
+						"e7fd701a-1889-4067-891f-48e58b457f71"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "POST load data",
+			"name": "POST LOAD data",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -120,17 +137,18 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"date\": \"4/3/17\",\n  \"client\": \"Twitri\",\n  \"project\": \"CLOB Rearchitecture\",\n  \"projectCode\": \"BGC001\",\n  \"task\": \"Project Management\",\n  \"hours\": \"6.26\",\n  \"hoursRounded\": \"6\",\n  \"billable\": \"Yes\",\n  \"invoiced\": \"Yes\",\n  \"approved\": \"Yes\",\n  \"firstName\": \"Walter\",\n  \"lastName\": \"Silva\",\n  \"department\": \"Product\",\n  \"employee\": \"Yes\",\n  \"billableRate\": \"50\",\n  \"costRate\": \"0\",\n  \"costAmount\": \"0\",\n  \"currency\": \"United States Dollar - USD\",\n  \"external0ReferenceUrl\": \"\"\n}\n"
+					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/timesheets",
+					"raw": "http://localhost:8080/timesheets/load",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"timesheets"
+						"timesheets",
+						"load"
 					]
 				}
 			},
@@ -143,7 +161,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8080/timesheets/29128880-6288-4efe-b052-524ebd39818e1",
+					"raw": "http://localhost:8080/timesheets/29128880-6288-4efe-b052-524ebd39818e",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -151,7 +169,28 @@
 					"port": "8080",
 					"path": [
 						"timesheets",
-						"29128880-6288-4efe-b052-524ebd39818e1"
+						"29128880-6288-4efe-b052-524ebd39818e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ALL Timesheets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/timesheets/deleteAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"timesheets",
+						"deleteAll"
 					]
 				}
 			},

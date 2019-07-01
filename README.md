@@ -11,9 +11,10 @@
    * display all timesheets
    * display all timesheet for the given client
 
-<p> Additionally one utility endpoint is implemented: </p>
+<p> Additionally utility endpoints are implemented: </p>
 
    * LOAD data from the given CSV file to the database
+   * DELETE ALL data from the database
 
 ## Business Rules
 

@@ -113,4 +113,15 @@ public class TimesheetController {
         return new ResponseEntity<>(timesheetService.loadData(), HttpStatus.OK);
     }
 
+    /**
+     * Utility method - delete ALL timesheets from the database.
+     *
+     * @return
+     */
+    @PostMapping(value = "/timesheets/deleteAll", produces = {"application/json"})
+    public ResponseEntity<?> deleteAll() {
+        timesheetService.deleteAll();
+        return new ResponseEntity(HttpStatus.NO_CONTENT);
+    }
+
 }
