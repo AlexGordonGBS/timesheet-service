@@ -41,13 +41,13 @@ public class TimesheetController {
     @DeleteMapping(value = "/timesheets/{id}", produces = {"application/json"})
     public ResponseEntity<?> deleteById(@PathVariable String id) {
         timesheetService.deleteById(id);
-        // DELETE operation is idempotent, delete an already deleted item is operation successful!
+        // DELETE operation is expected to be idempotent, therefore delete an already deleted item is operation successful!!!
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 
     @PostMapping(value = "/timesheets", produces = {"application/json"})
     public ResponseEntity<TimesheetEntity> addTimesheet(@Valid @RequestBody TimesheetEntity timesheetEntity) {
-        return new ResponseEntity<>(timesheetService.addTimesheet(timesheetEntity), HttpStatus.OK);
+        return new ResponseEntity<>(timesheetService.addTimesheet(timesheetEntity), HttpStatus.CREATED);
     }
 
     @PutMapping(value = "/timesheets/{id}", produces = {"application/json"})

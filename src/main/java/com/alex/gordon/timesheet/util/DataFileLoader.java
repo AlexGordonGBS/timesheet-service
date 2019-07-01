@@ -13,8 +13,8 @@ import java.util.List;
 
 @Component
 public class DataFileLoader {
-    private static final Logger LOGGER = LoggerFactory.getLogger(DataFileLoader.class);
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(DataFileLoader.class);
     // loads the config variable from the the properties file - application.yml.
     @Value("${dataFileName:unknownFile}")
     private String fileName;

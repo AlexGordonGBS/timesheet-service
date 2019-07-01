@@ -60,8 +60,12 @@ public class TimesheetEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof TimesheetEntity)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof TimesheetEntity)) {
+            return false;
+        }
         TimesheetEntity that = (TimesheetEntity) o;
         return id.equals(that.id);
     }
@@ -248,4 +252,5 @@ public class TimesheetEntity {
     public void setExternalReferenceUrl(String external0ReferenceUrl) {
         this.externalReferenceUrl = external0ReferenceUrl;
     }
+
 }

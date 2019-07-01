@@ -14,7 +14,6 @@ import java.util.Optional;
 public class TimesheetService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TimesheetService.class);
-
     private TimesheetRepo timesheetRepo;
     private DataFileLoader dataLoader;
 

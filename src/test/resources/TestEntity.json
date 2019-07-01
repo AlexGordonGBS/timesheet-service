@@ -1,0 +1,21 @@
+{
+  "date": "4/3/17",
+  "client": "Alex",
+  "project": "CLOB Rearchitecture",
+  "projectCode": "BGC001",
+  "task": "Project Management",
+  "hours": "6.26",
+  "hoursRounded": "6",
+  "billable": "Yes",
+  "invoiced": "Yes",
+  "approved": "Yes",
+  "firstName": "Walter",
+  "lastName": "Silva",
+  "department": "Product",
+  "employee": "Yes",
+  "billableRate": "50",
+  "costRate": "0",
+  "costAmount": "0",
+  "currency": "United States Dollar - USD",
+  "externalReferenceUrl": ""
+}

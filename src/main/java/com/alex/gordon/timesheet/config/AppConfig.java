@@ -17,7 +17,6 @@ public class AppConfig {
         jedisConFactory.setHostName("redis-19133.c83.us-east-1-2.ec2.cloud.redislabs.com");
         jedisConFactory.setPort(19133);
         jedisConFactory.setPassword("9xPWdrDBxIl7UopMTCIzcOLItkAQwh9d");
-
         return jedisConFactory;
     }
 
@@ -27,4 +26,5 @@ public class AppConfig {
         template.setConnectionFactory(jedisConnectionFactory());
         return template;
     }
+
 }
