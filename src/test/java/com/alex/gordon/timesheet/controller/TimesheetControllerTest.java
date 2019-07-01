@@ -62,14 +62,14 @@ public class TimesheetControllerTest {
         TimesheetEntity entityExpected = getTestEntity();
         entityExpected.setId("testEntityID");
         //When
-        doReturn(entityExpected).when(repo).save(entityExpected);
+        doReturn(entityExpected).when(repo).save(any(TimesheetEntity.class));
         ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
                 .post("/timesheets")
                 .content(JsonConverter.asJsonString(entityExpected))
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON));
         //Then
-        verify(repo, times(1)).save(entityExpected);
+        verify(repo, times(1)).save(any(TimesheetEntity.class));
         resultActions.andExpect(MockMvcResultMatchers.status().isCreated());
         MvcResult mvcResult = resultActions.andReturn();
         String content = mvcResult.getResponse().getContentAsString();
