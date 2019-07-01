@@ -39,46 +39,58 @@ a requested timesheet. </p>
 
 ## Prerequisites
 * JVM 1.8
+```
     java -version
     java version "1.8.0_211"
     Java(TM) SE Runtime Environment (build 1.8.0_211-b12)
     Java HotSpot(TM) 64-Bit Server VM (build 25.211-b12, mixed mode)
-
+```
 * Gradle 4.10
+```
     gradle --version
-
-------------------------------------------------------------
-Gradle 4.10
-------------------------------------------------------------
-
-Build time:   2018-08-27 18:35:06 UTC
-Revision:     ee3751ed9f2034effc1f0072c2b2ee74b5dce67d
-
-Kotlin DSL:   1.0-rc-3
-Kotlin:       1.2.60
-Groovy:       2.4.15
-Ant:          Apache Ant(TM) version 1.9.11 compiled on March 23 2018
-JVM:          1.8.0_211 (Oracle Corporation 25.211-b12)
-OS:           Mac OS X 10.14.3 x86_64
-
+    ------------------------------------------------------------
+    Gradle 4.10
+    ------------------------------------------------------------
+    Build time:   2018-08-27 18:35:06 UTC
+    Revision:     ee3751ed9f2034effc1f0072c2b2ee74b5dce67d
+    Kotlin DSL:   1.0-rc-3
+    Kotlin:       1.2.60
+    Groovy:       2.4.15
+    Ant:          Apache Ant(TM) version 1.9.11 compiled on March 23 2018
+    JVM:          1.8.0_211 (Oracle Corporation 25.211-b12)
+    OS:           Mac OS X 10.14.3 x86_64
+```
 * git version 2.18.0
+```
     git --version
     git version 2.18.0
-
+```
 ## How to clone, build and run
 * create a new folder somewehere on your machine
+```
     mkdir tempDir
+```
 * go to your new directory you just created:
+```
     cd tempDir
+```
 * clone the project inot your new directory:
+```
     git clone https://github.com/AlexGordonGBS/timesheet-service.git
+```
 * go to the timesheet-service directory inside your tempDir:
+```
     cd timesheet-service
+```
 * run the build:
+```
     gradle clean build
+```
 * start the service:
+```
     java -jar build/libs/timesheet-service-0.0.1-SNAPSHOT.jar
+```
 * PostMan collection to test the project can be found here:
+```
     ...timesheet-service/src/test/resources/Timesheet-service.postman_collection.json
-* Using provided PostMan you can test the project manually.
-
+```
