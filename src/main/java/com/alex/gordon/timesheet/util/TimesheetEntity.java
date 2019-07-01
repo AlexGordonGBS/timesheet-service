@@ -12,6 +12,7 @@ public class TimesheetEntity {
 
     @Indexed
     private String id = UUID.randomUUID().toString();
+    @NotBlank
     private String date;
     @Indexed
     @NotBlank
